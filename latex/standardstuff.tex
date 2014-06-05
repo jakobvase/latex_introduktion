@@ -1,0 +1,109 @@
+\chapter{Standard LaTeX kommandoer}
+Nu hvor du har læst baggrundsfilen, er du klar til at begive dig i kast med at skrive. Det første du skal vide er, hvordan man laver kapitler i LaTeX:\\ 
+%\\ laver en ny linie. Jeg vil gerne have eksemplerne til at stå klarere frem.
+
+\bs chapter\{Kapitlets navn\}\\
+
+\noindent %LaTeX indsætter som standard indentering i starten af hver paragraf. Denne kommando fjerner den.
+Dette printer det samme som du kan se i toppen af denne side, og hvert kapitel kommer på en ny side.
+
+\noindent
+Hvis du gerne vil have sektioner i dine kapitler, bruger du disse:\\
+
+\bs section\{Sektionens navn\}
+
+\section{Sektion}
+LaTeX giver dem selv numre, så de passer ind i dokumentet (og hvis du senere rykker rundt, passer numrene stadig.)
+
+\noindent
+LaTeX kan også lave sub- og subsubsections, men ikke lavere end dette uden ekstra pakker:\\
+
+\bs subsection\{Undersektion-navn\}
+
+\subsection{Undersektion}
+Og endelig:\\
+
+\bs subsubsection\{Under-undersektion-navn\}
+
+\subsubsection{Under-undersektion}
+Den her har slet ikke noget tal :)
+
+\section{Kursiv, fed, understreget}
+LaTeX har en standardkommando, for hvis du gerne vil forstærke tekst, som hedder \bs emph\{text\}. Det ser \emph{således} ud. Hvis du gerne vil bruge \emph{flere} metoder, så kan du bruge \bs textbf\{tekst\} for \textbf{fed tekst}, \bs textit\{tekst\} for \textit{kursiv tekst} og \bs underline\{tekst\} for \underline{understreget tekst}. Ellers ville jeg anbefale bare at bruge \bs emph, for den kan ændres, hvis du på et tidspunkt gerne vil vise dine markeringer på en anden måde.
+
+\section{Lister}
+I LaTeX laves lister således:\\
+
+\indent \bs begin\{itemize\}\\
+\indent \bs item Første punkt på listen.\\
+\indent \bs item Andet punkt på listen.\\
+\indent \bs end\{itemize\}\\
+
+\noindent
+Det er vigtigt både at skrive \emph{begin} og \emph{end}. Denne ser således ud:
+
+\begin{itemize}
+\item Første punkt på listen.
+\item Andet punkt på listen.
+\end{itemize}
+
+\noindent
+Man kan også lave nummererede lister:\\
+
+\indent \bs begin\{enumerate\}\\
+\indent \bs item Første punkt på listen\\
+\indent \bs item Andet punkt på listen\\
+\indent \bs end\{enumerate\}\\
+
+\noindent
+Det ser således ud:
+
+\begin{enumerate}
+\item Første punkt på listen
+\item Andet punkt på listen
+\end{enumerate}
+
+\noindent
+Man kan også lave flere lister inde i hinanden, altså give punkter underpunkter:\\
+
+\indent \bs begin\{itemize\}\\
+\indent \bs item Første punkt på listen\\
+\indent \bs item Andet punkt på listen\\
+\indent \bs begin\{itemize\}\\
+\indent \bs item Første underpunkt på andet punkt\\
+\indent \bs item Andet underpunkt på andet punkt\\
+\indent \bs end\{itemize\}\\
+\indent \bs item Tredje punkt på listen\\
+\indent \bs end\{itemize\}\\
+
+\begin{itemize}
+\item Første punkt på listen.
+\item Andet punkt på listen.
+\begin{itemize}
+\item Første underpunkt på andet punkt.
+\item Andet underpunkt på andet punkt.
+\end{itemize}
+\item Tredje punkt på listen.
+\end{itemize}
+
+\noindent
+I denne situation er det vigtigt at holde styr på, hvornår man skriver \bs begin og \bs end. LaTeX fortæller dig hvis du laver fejl, men ikke hvis underpunkterne er det forkerte sted :)\\
+
+\noindent
+Endelig kan man skrive tekst i stedet for prikkerne således:\\
+
+\indent \bs begin\{itemize\}\\
+\indent \bs item[Se] Det man laver med øjnene.\\
+\indent \bs item[Høre] Det man laver med ørerne.\\
+\indent \bs end\{itemize\}\\
+
+\noindent
+Det ser således ud:
+
+\begin{itemize}
+\item[Se] Det man laver med øjnene.
+\item[Høre] Det man laver med ørerne.
+\end{itemize}
+
+\noindent
+Det var alt hvad jeg havde om lister :)

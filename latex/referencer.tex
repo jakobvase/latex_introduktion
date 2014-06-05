@@ -1,0 +1,68 @@
+\chapter{Referencer}
+Referencer i LaTeX virker på en anden måde end du måske er vant til. Det kan gøres på forskellige måder. Den første handler om når du refererer dig selv andre steder i dokumentet.
+
+\section{Selvreferencer}
+Når man gerne vil referere sig selv (som for eksempel i sætningen \myquote{Se f.eks. indledningen (side 3)}), bruger man i LaTeX to kommandoer. En til at markere et sted som noget der skal refereres til:\\
+
+\bs label\{introduktion\}\\
+
+\noindent
+Og et til at referere til det:\\
+
+\bs ref\{introduktion\}\\
+
+\noindent
+Ordet \myquote{introduktion}, som jeg skriver inden i \bs label og \bs ref, er det navn, som jeg husker stedet med. Så hvis jeg gerne vil referere til introduktionen, giver det mening at kalde den det. Hvis jeg ville referere til problemformuleringen i stedet, ville jeg kalde den det.
+
+\noindent
+Nu vil jeg give et eksempel:\\
+
+\indent Her skriver jeg \bs label\{selvreferencer\}: \label{selvreferencer}\\
+\indent Her skriver jeg \bs ref\{selvreferencer\}: \ref{selvreferencer}\\
+
+\noindent
+Ved \bs label står der ingenting, og ved \bs ref står sektionsnummeret der. Så nu kan jeg altså referere til denne sektion et hvilket som helst sted i dokumentet, ved at skrive således:\\
+
+\indent Jeg skriver om referencer i sektion \bs ref\{selvreferencer\}\\
+\indent Jeg skriver om referencer i sektion \ref{selvreferencer}\\
+
+\noindent
+Man kan også referere til sidetallet ved at skrive \bs pageref:\\
+
+\indent Jeg skriver om selvreferencer på side \bs pageref\{selvreferencer\}\\
+\indent Jeg skriver om selvreferencer på side \pageref{selvreferencer}\\
+
+\noindent
+Smart! Det eneste man skal være opmærksom på, er at give \bs label'sene forskellige navne, for ellers ved LaTeX ikke hvilken én man mener.
+
+\section{Fodnoter, kommentarer og slutnoter}
+Fodnoter indsættes ved at skrive:\\
+
+\bs footnote\{Tekst som skal stå i fodnoten.\}\\
+
+\noindent
+Kommentarer indsættes ved at skrive:\\
+
+\bs marginpar\{Tekst som skal stå i kommentaren.\}\\
+
+\noindent
+Her kommer eksempler på de to:\\
+
+\indent Her skriver jeg en fodnote.\bs footnote\{Dette er en fodnote.\}\\
+\indent Her skriver jeg en fodnote.\footnote{Dette er en fodnote.}\\
+\indent Her skriver jeg en kommentar.\bs marginpar\{Dette er en kommentar.\}\\
+\indent Her skriver jeg en kommentar.\marginpar{Dette er en kommentar.}\\
+
+\noindent
+Slutnoter er lidt mere omstændige, der skal man hente pakken \myquote{endnotes}, og derefter skrive denne kommando:\\
+
+\bs let\bs footnote=\bs endnote\\
+
+\noindent
+Så altså, for at bruge slutnoter:\\
+
+\indent \bs usepackage\{endnotes\}\\
+\indent \bs let\bs footnote=\bs endnote\\
+
+\noindent
+Skal sættes ind i hovedfilen inden dokumentet begynder.

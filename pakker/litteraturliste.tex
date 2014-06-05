@@ -1,0 +1,27 @@
+\section{Litteraturliste}
+
+LaTeX er lavet til folk, som skriver mange artikler og bøger. De har brug for et smart system til at styre litteraturlister. I LaTeX skrive man bøger, artikler og hjemmesider ind i en fil for sig, og refererer så til dem ved hjælp af nøgleord. LaTeX holder så selv styr på hvilke emner du har refereret til, og laver en litteraturliste der kun indeholder dem. Tanken er, at du kan bruge den samme litteraturliste-fil til mange forskellige dokumenter.\\
+
+\subsection{Litteraturliste-filen}
+Litteraturliste-filer slutter med ".bib". Du kan åbne examplebib.bib i mappen, og se hvordan de er skrevet. Det vigtige er, at hvert emne har et nøgleord som jeg bruger her.
+
+\subsection{Citation}
+I LaTeX ser en citation således ud:\\
+
+\bs autocite\{nøgleord\}\\
+
+\noindent
+Dette printer følgende:\\
+
+\autocite{vase14}\\
+
+\noindent
+
+
+
+
+\nocite{john3}
+[autocite=plain,inline,footnote,superscript] %Hvad autocite skal gøre.
+[backref] %Om der skal printes en liste af steder hvor emnet i litteraturlisten bliver brugt.
+[citationstyle=authoryear, numeric] Hvis man gerne vil ændre hvordan citater ser ud.
+[bibliographystyle=authoryear, numeric] Hvis man gerne vil ændre hvordan litteraturlisten ser ud.
