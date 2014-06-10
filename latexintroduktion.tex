@@ -1,33 +1,48 @@
 %Velkommen til LaTeX introduktionen!
 %Denne linie er en kommentar, det kan du se ved at jeg bruger "%" tegnet i starten af linien. Den bliver ikke vist i det endelige dokument.
 %Jeg bruger kommentarer til at forklare de ting der står i dette dokument.
+
+
 %Det første vi skal er at sige at dette er et LaTeX dokument. Det skriver vi således:
 \documentclass{report}
+
 %Herefter sætter vi LaTeX til at være på dansk, og til at bruge utf8 format - det gør vi for at kunne bruge Æ, Ø og Å.
 \usepackage[danish]{babel}
 \usepackage[utf8]{inputenc}
+
 
 %Alle kommandoer i LaTeX starter med \-tegnet. Det kan du se i de tre øverste kommandoer her.
 %LaTeX er sejt, fordi man kan tilføje nye funktioner til det. Det har vi alledere gjort 2 gange, med kommandoen \usepackage{}. Inde imellem {} skriver man den pakke man skal bruge.
 %Hvis du, efter at have læst denne introduktion, har brug for noget som jeg ikke viser her, så bare søg på nettet efter det, der findes virkelig mange pakker med alt muligt underligt :)
 %Nu tilføjer jeg lige 5 pakker mere, som jeg selv altid har med, og som jeg vil forklare hvordan man bruger undervejs:
 
+
 \usepackage{hyperref}
 %Pakken hyperref gør alle referencer i rapporten til links man kan klikke på. Så indholdsfortegnelsen kan altså bruges til at hoppe ned til det sted man gerne vil hen.
+
 \usepackage{graphicx}
 %Pakken graphicx er rigtig god til at indsætte billeder med.
+
 \usepackage{pdfpages}
 %Pakken pdfpages er rigtig god til at indsætte andre pdf-filer med. Det har man ofte brug for i bilag.
+
 \usepackage{supertabular}
 %Pakken supertabular er god til at lave tabeller - LaTeX kan normalt ikke klare tabeller som går over 1 side, men det kan supertabular.
+
 \usepackage{float}
 %Pakken float er godt til at styre hvor billeder kommer hen - det får du at se senere.
+
 \usepackage{biblatex}
 \addbibresource{examplebib.bib}
 %Pakken biblatex er til at lave litteraturlister. Den er smart, og det viser jeg senere hvorfor. \addbibresource bruges til at tilføje en litteraturliste-fil, det beskriver jeg i samme afsnit.
+
+\usepackage{amsmath}
+%Pakken amsmath har en masse dejlige funktioner til at skrive flottere matematiske formler.
+
 \usepackage{todonotes}
 
 %Mange pakker kan man give ekstra argumenter til. Det gør man ved at skrive: \usepackage[argument]{package}. Mange af disse pakker har masser af indstillingsmuligheder, men jeg bruger det sjældent. Det eneste sted jeg bruger argumenter er i \documentclass{report}, i toppen af dokumentet. Her skriver jeg ofte: \documentclass[hidelinks, a4paper]{report}, fordi jeg ikke syns at pdf-links farver er pæne, og for at sikre at papiret er i a4 format. Jeg har ladt dem ude af denne introduktion for eksemplets skyld. Min standardforside ligger også i mappen her, og hedder standardforside.tex.
+
 
 %For at gøre tabeller lidt pænere tilføjer jeg ofte denne linie:
 %\renewcommand{\arraystretch}{1.5}
@@ -39,6 +54,7 @@
 %Jeg tilføjer ofte også denne kommando:
 \newcommand{\myquote}[1]{``{#1}''}
 %Her er der et argument med til kommandoen, [1], som jeg så kan bruge med {#1} i udførelsen. \myquote{LaTeX} skriver altså "LaTeX". (`` og '' bliver lavet om så de vender den rigtige vej i dokumentet.)
+
 
 %Så er vi færdige med setup.
 %Nu er der kun tilbage at begynde dokumentet! Here we go :)
@@ -59,15 +75,18 @@
 %\listoffigures
 \listoftodos
 
+
 %Nu kommer vi så til den vigtigste kommando i LaTeX, den hvor du importerer andre filer:
 \input{intro/introduktion}
 %Den henter filen introduktion.tex i mappen intro. Dette er smart til at strukturere dine dokumenter, som du kan se længere nede.
 
+
 %Du har nu fået en introduktion til hvordan man sætter et LaTeX dokument op.
 %Her følger resten af kapitlerne i denne introduktion, og du kan gå tilbage til at læse pdf'en. (De er også forklarede, men ikke så grundigt som her :) )
+
 \input{latex/standardstuff} %De ting man ofte bruger mens man skriver.
 \input{latex/referencer} %Hvordan man refererer til andre steder i dokumentet, laver fodnoter, slutnoter og litteraturreferencer, og hvordan man laver links.
-\input{pakker/litteraturliste} %Dette er fordi litteraturliste forklaringen er ret lang. Den 
+\input{pakker/litteraturliste} %Dette er fordi litteraturliste forklaringen er ret lang.
 \input{latex/formler} %Hvordan man skriver formler i LaTeX.
 \input{pakker/billeder} %Hvordan man indsætter billeder og pdf'er.
 \input{pakker/tabeller} %Hvordan man laver tabeller.
