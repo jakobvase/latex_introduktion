@@ -58,21 +58,22 @@ Hvis du gerne vil have en ramme rundt om et billede, kan du skrive \bs includegr
 
 \indent \bs begin\{figure\}\\
 \indent ... \\
-\indent \bs fbox\{\bs includegraphics[width=1\bs linewidth]\{sti til billede\}\}\\
+\indent \bs fbox\{\bs includegraphics[width=.8\bs linewidth]\{sti til billede\}\}\\
 \indent ... \\
 \indent \bs end\{figure\}\\
 
 \begin{figure}[H]
 \centering
-\fbox{\includegraphics[width=1\linewidth]{billeder/Madonna.jpg}}
+\fbox{\includegraphics[width=.8\linewidth]{billeder/Madonna.jpg}}
 \caption{Madonna med ramme}
 \label{fig:madonna_ramme}
 \end{figure}
 
 \noindent
-Hvis du vil have mere avancerede rammer, vil jeg foreslå at du søger på nettet. Der findes en pakke som hedder mdframed som er sej, men det er for meget at skrive om her. \todo{måske hvis caption i fbox?}
+Hvis du vil have mere avancerede rammer, vil jeg foreslå at du søger på nettet. Der findes en pakke som hedder \emph{mdframed} som er sej, men det er for meget at skrive om her.
 
 \subsubsection{Position}
-Hvis du vil styre 
+Hvis du vil styre hvor billedet bliver placeret mere præcist (højre, venstre, midtfor, uden for marginerne) bør du bruge \todo{færdiggør billedposition.}
 
-\todo{Skriv om hvordan med billeder.} \todo{text wrap, position...}
+\subsubsection{Text-wrap}
+At få teksten til at kunne stå rundt om billedet er en lidt større operation, og sjældent nødvendig i akademiske tekster. Se dette link for en beskrivelse af hvordan man kan gøre: \url{http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}.
