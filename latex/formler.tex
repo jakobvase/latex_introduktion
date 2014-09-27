@@ -1,2 +1,22 @@
 \chapter{Formler}
-\todo{Formler og math mode}
+\label{chap:formler}
+LaTeX blev oprindeligt lavet, fordi matematikeren Donald Knuth manglede et program til at skrive flotte formler med. Så LaTeX er ret sej til formler.
+
+\section{Math mode}
+I LaTeX skelner man mellem "text mode" og "math mode". Normalt når du skriver er du i "text mode", og når du gerne vil skrive formler skal du i "math mode". Der findes to slags math mode, "inline" og "display". Jeg viser dem her:\\
+
+\indent Denne formel er inline $2 + 3 = 5$, og nu skriver jeg videre.\\
+\indent Denne formel er display \[2 + 3 = 5\]\indent, og nu skriver jeg videre.\\
+
+\noindent For at gå i inline math mode skriver du \$ formel \$, og for at gå i display math mode skriver du \bs [ formel \bs ].
+
+For at skrive tekst inde i math mode (som for eksempel i integralregning), bruger man kommandoen \bs text\{den tekst du vil skrive\}. (Du kan også bruge \bs textbf, \bs textit osv.)\\
+
+\noindent
+I resten af kapitlet vil jeg gå ud fra at du er i math mode.
+
+\section{Matematiske symboler}
+
+\todo{Matematiske symboler, opløftet, osv.}
+
+For en dyberegående diskussion af formler i LaTeX, check \url{http://en.wikibooks.org/wiki/LaTeX/Mathematics}, og for endnu dybere diskussion \url{http://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics}.

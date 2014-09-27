@@ -1,3 +1,36 @@
 \chapter{Bilagseksempel}
 
-Total standard bilag.\todo{Skriv noget ordentligt i bilaget.}
+Dette er et bilag - både for eksemplets skyld og for at give lidt baggrundsinformation.
+
+\section{At skrive specielle tegn}
+Der findes en del tegn i LaTeX, som bliver brugt til at skrive kommandoer eller andet. Du er allerede stødt på "{\bs}" tegnet. Hvis man gerne vil skrive disse tegn i teksten skal man bruge specielle kommandoer, de kommer her:
+
+\begin{table}[H]
+\begin{tabular}{l | l || l | l}
+\hline\noalign{\smallskip}
+"\bs " & \bs textbackslash  & "\_" & \bs \_ \\
+"\{" & \bs \{ & "\&" & \bs \& \\
+"\}" & \bs \} & "\%" & \bs \% \\
+"\$" & \bs \$ & "\#" & \bs \# \\
+"\textgreater" & \bs textgreater & "\textless" & \bs textless \\
+\noalign{\smallskip}
+\hline
+\end{tabular}
+\end{table}
+
+\noindent
+Vær opmærksom på at \textbackslash, \textgreater og \textless skrives på en anden måde i "math mode", se kapitel \ref{chap:formler}.
+
+Hvis du skriver komplicerede matematiske formler, vil du få brug for tegn jeg ikke har beskrevet her. En god side til at finde disse er
+
+\noindent
+\url{http://www.artofproblemsolving.com/Wiki/index.php/LaTeX:Symbols}
+
+\noindent
+og her er en pdf som har ALLE symbolerne:
+
+\noindent
+\url{http://www.tex.ac.uk/tex-archive/info/symbols/comprehensive/symbols-a4.pdf}.
+
+\section{Fejl}
+Fejl (pludselig math mode). (Errors også "pdf already open" og "underfull/overfull hbox").\todo{Skriv om fejl.}
