@@ -5,18 +5,56 @@ LaTeX blev oprindeligt lavet, fordi matematikeren Donald Knuth manglede et progr
 \section{Math mode}
 I LaTeX skelner man mellem "text mode" og "math mode". Normalt når du skriver er du i "text mode", og når du gerne vil skrive formler skal du i "math mode". Der findes to slags math mode, "inline" og "display". Jeg viser dem her:\\
 
-\indent Denne formel er inline $2 + 3 = 5$, og nu skriver jeg videre.\\
-\indent Denne formel er display \[2 + 3 = 5\]\indent, og nu skriver jeg videre.\\
+\indent Denne formel er inline: $2 + 3 = 5$, og nu skriver jeg videre.\\
+\indent Denne formel er display: \[2 + 3 = 5\]\indent, og nu skriver jeg videre.\\
 
 \noindent For at gå i inline math mode skriver du \$ formel \$, og for at gå i display math mode skriver du \bs [ formel \bs ].
 
-For at skrive tekst inde i math mode (som for eksempel i integralregning), bruger man kommandoen \bs text\{den tekst du vil skrive\}. (Du kan også bruge \bs textbf, \bs textit osv.)\\
+For at skrive almindelig, ikke-kursiv tekst inde i math mode (som for eksempel i integralregning), bruger man kommandoen \bs textrm\{den tekst du vil skrive\}. (Du kan også bruge \bs textbf, \bs textit osv.)\\
 
 \noindent
 I resten af kapitlet vil jeg gå ud fra at du er i math mode.
 
-\section{Matematiske symboler}
+\section{Matematisk notation}
+Her følger en liste af de mest brugte matematiske notationer. For en dyberegående diskussion af formler i LaTeX, check \url{http://en.wikibooks.org/wiki/LaTeX/Mathematics}, og for endnu dybere diskussion \url{http://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics}.\\
 
-\todo{Matematiske symboler, opløftet, osv.}
+\noindent
+Alle de følgende notationer kan blandes og mixes, som man har lyst.
 
-For en dyberegående diskussion af formler i LaTeX, check \url{http://en.wikibooks.org/wiki/LaTeX/Mathematics}, og for endnu dybere diskussion \url{http://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics}.
+\[a + 1 - 5 \times 1 / 5 = a\]
+
+\noindent
+Skrives således: a + 1 - 5 \bs times 1 / 5 = a
+
+\[ 2^2 = \sqrt{16} \]
+
+\noindent
+Skrives således: 2\^{}2 = \bs sqrt\{16\}
+
+\[ 1^{22x} = \sqrt[38y]{1} \]
+
+\noindent
+Skrives således: 1\^{}\{22x\} = \bs sqrt[38y]\{1\}
+
+\[ \frac{n!}{k!(n-k)!} = \binom{n}{k} \]
+
+\noindent
+Skrives således: \bs frac\{n!\}\{k!(n-k)!\} = \bs binom\{n\}\{k\}
+
+\[ k_n = k_0 + k_{n + 1} \]
+
+\noindent
+Skrives således: k\_n = k\_0 + k\_\{n + 1\}
+
+\[ \sum_{i=1}^{10} t_i \]
+
+\noindent
+Skrives således: \bs sum\_\{i=1\}\^{}\{10\} t\_i
+
+\[ \int_{0}^{\infty} \mathrm{e}^{-x} \, \mathrm{d}x \]
+
+\noindent
+Skrives således: \bs int\_\{0\}\^{}\{\bs infty\} \bs mathrm\{e\}\^{}\{-x\} \bs , \bs mathrm\{d\}x\\
+
+\noindent
+Jeg håber, at du har fået det du skulle bruge. Ellers check de links jeg har skrevet i toppen af afsnittet.

@@ -33,4 +33,19 @@ og her er en pdf som har ALLE symbolerne:
 \url{http://www.tex.ac.uk/tex-archive/info/symbols/comprehensive/symbols-a4.pdf}.
 
 \section{Fejl}
-Fejl (pludselig math mode). (Errors også "pdf already open" og "underfull/overfull hbox").\todo{Skriv om fejl.}
+Nogle gange, når man skriver i LaTeX, kommer man forbi mærkelige fejl. Jeg beskriver de mest almindelige her, men ellers søg på nettet, så er der altid nogle som har prøvet det før.\\
+
+\noindent
+\textbf{Missing \$ inserted:} Dette betyder, at du har skrevet et symbol som kun findes i math-mode (se kapitel \ref{chap:formler}). For eksempel \bs backslash, \^ eller \_. For at bruge dem i text-mode, check listen over specielle tegn ovenfor.\\
+
+\noindent
+\textbf{Document already open:} Dette betyder, at pdf-filen som LaTeX gerne vil gemme, allerede er åben, og LaTeX kan derfor ikke få lov til at lave den. Check om du har pdf-filen åben i et andet program, og luk den der.\\
+
+\noindent
+\textbf{Underfull/Overfull \bs hbox:} Dette betyder, at LaTeX ikke er sikker på, om stedet er layoutet godt. I de fleste tilfælde er der ikke noget galt, men af og til ser noget mærkeligt ud. Det sker typisk når du bruger \bs url\{...\}, og navnet på hjemmesiden er mega langt, eller ved brug af billeder. For at rette det i \texttt{\bs url} kommandoen skal du ændre i dine \texttt{\bs usepackage} linier i toppen af dokumentet. Du skal skrive:\\
+
+\indent \bs usepackage[hyphens]\{url\}\\
+\indent \bs usepackage[hyphens]\{hyperref\}\\
+
+\noindent
+Du har sandsynligvis allerede tilføjet "hyperref" pakken. Det eneste du skal gøre er derfor at tilføje \texttt{\bs usepackage[hyphens]\{url\}} over "hyperref". Hvis du skriver "url" under "hyperref" får du en fejl. Hvis du stadig har problemer, se om du kan finde svar her: \url{http://tex.stackexchange.com/questions/3033/forcing-linebreaks-in-url}. Hvis problemet er billeder må du gå til google. Det er kompliceret.
